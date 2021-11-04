@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <div class="box-count">
+        <h3>Contador de vogais</h3>
+        <div>
+            <input id="inputChars" type="text" value="azul">
+            <span><small id="showCountVowels"></small> vogais</span>
+            <button onclick="reset()">Reset</button>
+        </div>
+        
+    </div>
+</body>
+
+<style>
+    .box-count {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+        height: 250px;
+        background: lightgray;
+        margin: 100px auto;
+        border-radius: 8px;
+    }
+    .box-count div {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .box-count input {
+        width: 45%;
+        height: 20px;
+        border: 0;
+    }
+</style>
+<script src="/exercicio_1/contador.js"></script>
+</html>
