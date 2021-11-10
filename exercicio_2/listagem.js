@@ -1,4 +1,4 @@
-var list = [
+let list = [
     {
         id: 1,
         name: "Ada Lovelace",
@@ -78,45 +78,40 @@ function updateItemImperativo(id, type, value) {
 updateItemImperativo(3, "name", "Any");
 // parte funcional
 //a) Crie uma função que retorne a bio do id passado
-function getBio(id) {
-    var person = list.find(function (item) { return item.id === id; });
-    console.log(person === null || person === void 0 ? void 0 : person.bio);
+function getBio(list, id) {
+    var _a;
+    return ((_a = list.find(function (item) { return item.id === id; })) === null || _a === void 0 ? void 0 : _a.bio) || 'Pessoa não encontrada';
 }
-getBio(1);
+console.log(getBio(list, 1));
 //b) Crie uma função que retorne a name do id passado
-function getName(id) {
-    var person = list.find(function (item) { return item.id === id; });
-    console.log(person === null || person === void 0 ? void 0 : person.name);
+function getName(list, id) {
+    var _a;
+    return ((_a = list.find(function (item) { return item.id === id; })) === null || _a === void 0 ? void 0 : _a.name) || 'Pessoa não encontrada';
 }
-getName(1);
+console.log('Get name => ', getName(list, 1));
 // c) Crie uma função que apague um item da lista a partir de um id passado
-function deleteItem(id) {
-    var delItem = list.find(function (item) { return item.id === id; });
-    if (delItem) {
-        var index = list.indexOf(delItem);
-        var itemDeleted = list.splice(index, 1);
-        console.log("Item deletado:", itemDeleted);
-    }
-    else {
-        console.log("Id não encontrado");
-    }
+function deleteItem(list, id) {
+    return list.filter(function (item) { return item.id !== id; });
 }
-deleteItem(2);
+console.log('Delete item: Array atualizado => ', deleteItem(list, 1));
 // d) Crie uma função que altere a bio ou o name a partir de um id passado
-function updateItem(id, type, value) {
+function updateItem(list, id, type, value) {
     var update = list.find(function (item) { return item.id === id; });
     if (update) {
         var index = list.indexOf(update);
+        var newList = list;
         if (type === "name") {
-            list[index].name = value;
+            newList[index].name = value;
         }
         if (type === "bio") {
-            list[index].bio = value;
+            newList[index].bio = value;
         }
+        return newList;
     }
     else {
         console.log("id inexistente");
+        return "id inexistente";
     }
 }
-updateItem(1, "name", "felps");
+console.log(updateItem(list, 1, "name", "felps222"));
 console.log(list);

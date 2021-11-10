@@ -12,7 +12,7 @@ function reset() {
 }
 
 //conta as vogais do texto pré-escrito.(referente a questão 1.a)
-function getFixedChar(str: string) {
+function getFixedChar(str: string): void {
   for (let char of str){
      if (vowels.includes(char)){
       countVowels++;
@@ -24,7 +24,7 @@ getFixedChar(fixedChar)
 //quando o usuário digita algo no input.(referente a questão 1.b)
 inputVowels.addEventListener('keypress', (event: KeyboardEvent) => countChars(event.key));
 
-function countChars(char: string) {
+function countChars(char: string): void {
   if(vowels.includes(char)) {
     countVowels++
     numberVowels.innerHTML = countVowels.toString();
