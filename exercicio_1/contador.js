@@ -1,6 +1,6 @@
 var inputVowels = document.getElementById("inputChars");
 var numberVowels = document.getElementById("showCountVowels");
-var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+var vowels = ['a', 'e', 'i', 'o', 'u'];
 var countVowels = 0;
 var fixedChar = inputVowels.value;
 function reset() {

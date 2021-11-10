@@ -1,6 +1,6 @@
 const inputVowels = document.getElementById("inputChars") as HTMLInputElement;
 const numberVowels = document.getElementById("showCountVowels") as HTMLSpanElement;
-const vowels = ['a','e','i','o','u', 'A','E','I','O','U'];
+const vowels: Array<string> = ['a','e','i','o','u'];
 let countVowels: number = 0;
 let fixedChar = inputVowels.value;
 
