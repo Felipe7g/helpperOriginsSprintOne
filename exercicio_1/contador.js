@@ -1,8 +1,8 @@
-var inputVowels = document.getElementById("inputChars");
-var numberVowels = document.getElementById("showCountVowels");
-var vowels = ['a', 'e', 'i', 'o', 'u'];
-var countVowels = 0;
-var fixedChar = inputVowels.value;
+let inputVowels = document.getElementById("inputChars");
+let numberVowels = document.getElementById("showCountVowels");
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+let countVowels = 0;
+let fixedChar = inputVowels.value;
 function reset() {
     inputVowels.value = '';
     numberVowels.innerText = '';
@@ -11,8 +11,8 @@ function reset() {
 }
 //conta as vogais do texto pré-escrito.(referente a questão 1.a)
 function getFixedChar(str) {
-    for (var _i = 0, str_1 = str; _i < str_1.length; _i++) {
-        var char = str_1[_i];
+    for (let _i = 0, str_1 = str; _i < str_1.length; _i++) {
+        let char = str_1[_i];
         if (vowels.includes(char)) {
             countVowels++;
         }
